@@ -1,5 +1,5 @@
-#ifndef ROUTER_H
-#define ROUTER_H
+#ifndef FILESYSTEMDRIVER_H
+#define FILESYSTEMDRIVER_H
 
 #include <QObject>
 
@@ -7,17 +7,17 @@
 
 // Router& router = Router::getInstance();
 
-class Router : public QObject
+class FileSystemDriver : public QObject
 {
     Q_OBJECT
 public:
-    static Router& getInstance();
-    ~Router();
+    static FileSystemDriver& getInstance();
+    ~FileSystemDriver();
 
     Repository& getRepository();
 
 private:
-    explicit Router(QObject *parent = nullptr);
+    explicit FileSystemDriver(QObject *parent = nullptr);
 
     /// Репозиторий, хранящий текущее состояние
     Repository m_repository;
@@ -25,16 +25,16 @@ private:
     /**
      * @brief Подключет слоты к сигналам полей класса
      */
-    void setupConnections();
+    void setupSlots();
 
     /**
      * @brief Отключает слоты от сигналов полей класса
      */
-    void resetConnections();
+    void resetSlots();
 
 signals:
 
 public slots:
 };
 
-#endif // ROUTER_H
+#endif // FILESYSTEMDRIVER_H

@@ -5,7 +5,7 @@
 
 #include "models/settings_manager/settings_manager.h"
 
-class Router;
+class FileSystemDriver;
 
 class Repository : public QObject
 {
@@ -19,7 +19,7 @@ public:
 private:
     QString m_helloString;
 
-    friend class Router;
+    friend class FileSystemDriver;
 
 signals:
 

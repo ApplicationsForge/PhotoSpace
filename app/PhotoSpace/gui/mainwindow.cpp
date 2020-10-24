@@ -8,7 +8,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     ui->mainToolBar->hide();
 
-    Router& router = Router::getInstance();
+    FileSystemDriver& router = FileSystemDriver::getInstance();
     ui->label->setText(router.getRepository().helloString());
 
     // установка оформления statusBar

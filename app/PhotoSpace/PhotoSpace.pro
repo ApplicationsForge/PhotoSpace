@@ -27,14 +27,14 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
         gui/mainwindow.cpp \
+    models/file_system_driver.cpp \
     models/repository/repository.cpp \
-    models/router.cpp \
     models/settings_manager/settings_manager.cpp
 
 HEADERS += \
         gui/mainwindow.h \
+    models/file_system_driver.h \
     models/repository/repository.h \
-    models/router.h \
     models/settings_manager/settings_manager.h
 
 FORMS += \
