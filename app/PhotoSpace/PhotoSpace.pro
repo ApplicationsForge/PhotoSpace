@@ -25,6 +25,9 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+    gui/widgets/base_list_widget.cpp \
+    gui/widgets/destination_list_widget.cpp \
+    gui/widgets/source_list_widget.cpp \
         main.cpp \
         gui/mainwindow.cpp \
     models/file_system_driver.cpp \
@@ -33,6 +36,9 @@ SOURCES += \
 
 HEADERS += \
         gui/mainwindow.h \
+    gui/widgets/base_list_widget.h \
+    gui/widgets/destination_list_widget.h \
+    gui/widgets/source_list_widget.h \
     models/file_system_driver.h \
     models/repository/repository.h \
     models/settings_manager/settings_manager.h
